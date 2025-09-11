@@ -4,6 +4,11 @@ export default function Home() {
   return (
     <div>
       <Navbar />
+      <h1>Welcome to Mission EcoFuel 🌍</h1>
+      <p>Building a greener and sustainable future for everyone.</p>
+    </div>
+  );
+}
 
       {/* Hero Section */}
       <section className="bg-green-600 text-white text-center py-24 px-6">
