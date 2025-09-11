@@ -49,6 +49,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-20 px-6">
+        <h2 className="text-3xl font-bold text-center text-green-700 mb-12">
+          Why Choose Mission Ecofuel?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="p-6 bg-green-100 rounded-xl shadow-md">
+            <h3 className="text-xl font-semibold mb-2">Health Protection</h3>
+            <p>
+              Prevents toxic UCO from re-entering the food chain, safeguarding
+              public health.
+            </p>
+          </div>
+          <div className="p-6 bg-green-100 rounded-xl shadow-md">
+            <h3 className="text-xl font-semibold mb-2">Environmental Impact</h3>
+            <p>
+              Reduces carbon emissions and supports a cleaner, greener
+              environment.
+            </p>
+          </div>
+          <div className="p-6 bg-green-100 rounded-xl shadow-md">
+            <h3 className="text-xl font-semibold mb-2">Government Aligned</h3>
+            <p>
+              Supporting India’s RUCO initiative and contributing to national
+              biofuel targets.
+            </p>
+          </div>
+          <div className="p-6 bg-green-100 rounded-xl shadow-md">
+            <h3 className="text-xl font-semibold mb-2">Carbon Credits</h3>
+            <p>
+              Generating carbon credits and building a circular economy through
+              sustainability.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="bg-green-700 text-white text-center py-16">
+        <h2 className="text-3xl font-bold mb-6">Join the Mission</h2>
+        <p className="max-w-xl mx-auto mb-8">
+          Be part of the change. Whether you are a restaurant, household, or
+          business, your contribution helps protect lives, reduce emissions, and
+          create a cleaner future.
+        </p>
+        <button className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200">
+          Partner With Us
+        </button>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8 text-center mt-12">
         <p>© {new Date().getFullYear()} Mission Ecofuel. All rights reserved.</p>
