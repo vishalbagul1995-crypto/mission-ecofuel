@@ -1,5 +1,6 @@
 "use client";
-import Navbar from "../components/Navbar.jsx";
+
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -9,6 +10,7 @@ export default function Navbar() {
     <nav className="bg-green-600 text-white shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          
           {/* Logo */}
           <div className="flex-shrink-0 text-2xl font-bold">
             🌱 Mission Ecofuel
@@ -38,58 +40,38 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Hamburger Button (Mobile) */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="focus:outline-none text-2xl"
+              className="focus:outline-none"
             >
-              {isOpen ? "✖" : "☰"}
+              {isOpen ? (
+                <span className="text-2xl">✖</span>
+              ) : (
+                <span className="text-2xl">☰</span>
+              )}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <ul className="md:hidden bg-green-700 px-4 py-3 space-y-2 text-center">
-          <li>
-            <Link
-              href="/"
-              className="block hover:text-gray-200"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/about"
-              className="block hover:text-gray-200"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/services"
-              className="block hover:text-gray-200"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className="block hover:text-gray-200"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <div className="md:hidden bg-green-700 px-4 py-3 space-y-2">
+          <Link href="/" className="block hover:text-gray-200">
+            Home
+          </Link>
+          <Link href="/about" className="block hover:text-gray-200">
+            About
+          </Link>
+          <Link href="/services" className="block hover:text-gray-200">
+            Services
+          </Link>
+          <Link href="/contact" className="block hover:text-gray-200">
+            Contact
+          </Link>
+        </div>
       )}
     </nav>
   );
